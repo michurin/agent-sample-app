@@ -6,6 +6,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+/*
 rl.question('Please enter account id: \n', (accountId) => {
     rl.question('Please enter agent user name: \n', (userName) => {
         rl.question('Please enter agent password: \n', (password) => {
@@ -16,3 +17,6 @@ rl.question('Please enter account id: \n', (accountId) => {
         });
     });
 });
+*/
+const agent = new agentBot(process.env.LP_ACCAUNT_ID, process.env.LP_USER, process.env.LP_PASSWARD);
+agent.start();
